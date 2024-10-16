@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/warningsListFragment">
+
+    <fragment
+        android:id="@+id/warningsListFragment"
+        android:name="ru.soft.companywarnings.WarningsListFragment"
+        android:label="fragment_warnings_list"
+        tools:layout="@layout/fragment_warnings_list" >
+        <action
+            android:id="@+id/action_warningsListFragment_to_companyWarningEditFragment"
+            app:destination="@id/companyWarningEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyWarningEditFragment"
+        android:name="ru.soft.companywarnings.CompanyWarningEditFragment"
+        android:label="fragment_company_warning_edit"
+        tools:layout="@layout/fragment_company_warning_edit" />
+</navigation>
