@@ -1,7 +1,7 @@
 package ru.soft.companywarnings.db
 
 import androidx.room.TypeConverter
-import ru.soft.companywarnings.warnings.Priority
+import ru.soft.companywarnings.model.Priority
 
 class WarningsTypeConverters {
     @TypeConverter

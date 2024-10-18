@@ -6,8 +6,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import ru.soft.companywarnings.db.CompanyWarningDao
-import ru.soft.companywarnings.warnings.CompanyWarning
-import ru.soft.companywarnings.warnings.Priority
+import ru.soft.companywarnings.model.CompanyWarning
+import ru.soft.companywarnings.model.Priority
 import javax.inject.Inject
 
 @HiltAndroidApp

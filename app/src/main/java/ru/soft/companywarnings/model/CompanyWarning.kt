@@ -1,4 +1,4 @@
-package ru.soft.companywarnings.warnings
+package ru.soft.companywarnings.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

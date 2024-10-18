@@ -18,5 +18,9 @@
         android:id="@+id/companyWarningEditFragment"
         android:name="ru.soft.companywarnings.CompanyWarningEditFragment"
         android:label="fragment_company_warning_edit"
-        tools:layout="@layout/fragment_company_warning_edit" />
+        tools:layout="@layout/fragment_company_warning_edit" >
+        <argument
+            android:name="warningId"
+            app:argType="integer" />
+    </fragment>
 </navigation>
