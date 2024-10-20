@@ -14,8 +14,8 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import ru.soft.companywarnings.viewmodels.WarningsListViewModel
 import ru.soft.companywarnings.model.CompanyWarning
+import ru.soft.companywarnings.viewmodels.WarningsListViewModel
 
 @AndroidEntryPoint
 class WarningsListFragment : Fragment() {

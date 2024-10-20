@@ -5,6 +5,9 @@
     <string name="new_button_string">New warning</string>
     <string name="sync_button_string">Sync</string>
 
+    <string name="save_button_string">Save</string>
+    <string name="cancel_button_string">Cancel</string>
+
     <string name="warnings_string">Company Warnings</string>
     <string name="connection_status_string">Internet access</string>
 </resources>

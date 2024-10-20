@@ -11,12 +11,15 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.navArgs
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import ru.soft.companywarnings.viewmodels.CompanyWarningEditViewModel
 
+@AndroidEntryPoint
 class CompanyWarningEditFragment : Fragment() {
 
     companion object {
+        const val NEW_WARNING_PARAMETER = -1
         fun newInstance() = CompanyWarningEditFragment()
     }
 
@@ -24,10 +27,6 @@ class CompanyWarningEditFragment : Fragment() {
     var textView: TextView? = null
 
     private val viewModel: CompanyWarningEditViewModel by viewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,10 +40,12 @@ class CompanyWarningEditFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.getWarningById(args.warningId).collect { companyWarning ->
-                    textView?.text = companyWarning.toString()
+        if (args.warningId != NEW_WARNING_PARAMETER) {
+            viewLifecycleOwner.lifecycleScope.launch {
+                viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    viewModel.getWarningById(args.warningId).collect { companyWarning ->
+                        textView?.text = companyWarning.toString()
+                    }
                 }
             }
         }
