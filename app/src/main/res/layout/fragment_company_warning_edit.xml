@@ -7,15 +7,86 @@
     android:layout_height="match_parent"
     tools:context=".CompanyWarningEditFragment">
 
-    <TextView
-        android:id="@+id/warningIdTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Back"
+                    android:src="@android:drawable/ic_menu_revert" />
+
+                <TextView
+                    android:id="@+id/warningIdTextView"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="test text" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="83dp"
+                    android:layout_height="61dp"
+                    android:layout_weight="1"
+                    android:src="?android:attr/alertDialogIcon" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_text" />
+
+                <EditText
+                    android:id="@+id/editTextText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="@string/title_text" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/description_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description_text" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="96dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    tools:text="@string/description_text" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView4"

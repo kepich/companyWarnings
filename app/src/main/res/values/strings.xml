@@ -10,4 +10,7 @@
 
     <string name="warnings_string">Company Warnings</string>
     <string name="connection_status_string">Internet access</string>
+
+    <string name="description_text">Description</string>
+    <string name="title_text">Title</string>
 </resources>
